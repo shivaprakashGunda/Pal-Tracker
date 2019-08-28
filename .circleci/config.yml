@@ -29,9 +29,9 @@ jobs:
            flyway-*/flyway -url="jdbc:mysql://localhost:3306/tracker_dotnet_test" -locations=filesystem:databases/tracker -user=tracker_dotnet -password=password clean migrate
 
       - run:
-        name: Test and build
-        command: |
-          bash ./scripts/build.sh $CIRCLE_SHA1
+         name: Test and build
+         command: |
+           bash ./scripts/build.sh $CIRCLE_SHA1
 
       - store_artifacts:
           path: artifacts
