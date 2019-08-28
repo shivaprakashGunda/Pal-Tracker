@@ -31,7 +31,7 @@ jobs:
       - run:
         name: Test and build
         command: |
-          bash ./scripts/build.sh $CIRCLE_SHA1
+          bash ./scripts/build.sh
 
       - store_artifacts:
           path: artifacts
